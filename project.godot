@@ -1,0 +1,36 @@
+; THE LONG SILENCE — native Godot 4 port
+; Optimized for desktop Vulkan GPUs, including RTX 4050-class hardware.
+config_version=5
+
+[application]
+config/name="The Long Silence — Native"
+run/main_scene="res://godot/Main.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+boot_splash/bg_color=Color(0.003, 0.006, 0.012, 1)
+boot_splash/show_image=false
+
+[display]
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/window_width_override=1600
+window/size/window_height_override=900
+window/stretch/mode="canvas_items"
+window/vsync/vsync_mode=1
+
+[rendering]
+renderer/rendering_method="forward_plus"
+renderer/rendering_method.mobile="mobile"
+textures/default_filters/use_nearest_mipmap_filter=false
+anti_aliasing/quality/msaa_3d=2
+anti_aliasing/quality/screen_space_aa=1
+scaling_3d/mode=1
+scaling_3d/scale=1.0
+occlusion_culling/use_occlusion_culling=true
+lights_and_shadows/directional_shadow/size=4096
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=2
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=2
+environment/defaults/default_clear_color=Color(0.0015, 0.003, 0.008, 1)
+
+[physics]
+3d/default_gravity=9.8
+common/physics_ticks_per_second=60

@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.godot/
+build/
+*.log
+.DS_Store
